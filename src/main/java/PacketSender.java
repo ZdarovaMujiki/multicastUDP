@@ -15,13 +15,13 @@ public class PacketSender implements Runnable {
 
     @Override
     public void run() {
-        while(true) {
-            try {
+        try {
+            while(true) {
                 socket.send(packet);
                 Thread.sleep(SLEEP_DURATION);
-            } catch (IOException | InterruptedException e) {
-                e.printStackTrace();
             }
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

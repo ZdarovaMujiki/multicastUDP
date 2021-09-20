@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.nsu.zdarovamujiki'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    archiveBaseName.set('multicastUDP')
+    archiveClassifier.set('')
+    archiveVersion.set('')
+    manifest {
+        attributes(
+                'Main-Class': 'Main'
+        )
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
